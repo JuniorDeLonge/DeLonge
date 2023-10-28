@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="theme-color" content="#FF2500" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF2500" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Build Projects Website with HTML 5, CSS 3 and JavaScript" />
+    <meta name="keywords" content="Portfolio, Junior DeLonge, Dev" />
+    <meta name="author" content="@juniordelonge" />
+    <title>Junior DeLonge - Portfolio</title>
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon" />    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="images/icon.png" alt="Logo"/>
+            </a>
+        </div>
+        <div class="topnav" id="myTopnav">
+
+            <a id="dark-mode-toggle" class="moon-icon"><i class="fa-solid fa-bolt"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa-solid fa-bars-staggered"></i>
+            </a>
+            <a href="#inicio">inicio</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contato">contato</a>
+        </div>
+    </header>
+    <main class="content">
+        <section id="inicio">
+            <div class="container1">
+                <h2 class="texto-muda-cor">
+                    <i class="fa-solid fa-file-lines" style="margin-right: 10px;"></i>
+                    Início
+                </h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa et
+                    ad, itaque ipsum impedit ducimus vero fugit amet earum deserunt omnis
+                    possimus minima ipsam quia est quaerat illo quidem.
+                </p>
+            </div>
+        </section>
+        
+        
+        <section id="portfolio">
+            <div class="container1">
+                <h2 class="texto-muda-cor">
+                    <i class="fa-solid fa-file-lines" style="margin-right: 10px;"></i>Portfolio</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa et
+                    ad, itaque ipsum impedit ducimus vero fugit amet earum deserunt omnis
+                    possimus minima ipsam quia est quaerat illo quidem.
+                </p>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="container1">
+                <h2 class="texto-muda-cor"><i class="fa-solid fa-file-lines" style="margin-right: 10px;"></i>Contato</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa et
+                    ad, itaque ipsum impedit ducimus vero fugit amet earum deserunt omnis
+                    possimus minima ipsam quia est quaerat illo quidem.
+                </p>
+            </div>
+        </section>
+        <section id="dev">
+            <div class="container1">
+                <h2 class="texto-muda-cor"><i class="fa-solid fa-file-lines" style="margin-right: 10px;"></i>/ dev</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum culpa et
+                    ad, itaque ipsum impedit ducimus vero fugit amet earum deserunt omnis
+                    possimus minima ipsam quia est quaerat illo quidem.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>links</h4>
+                    <ul>
+                        <li><a href="#">inicio</a></li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>dev</h4>
+                    <ul>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">deploy</a></li>
+                        <li><a href="#">News dev</a>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Redes</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/JuniorDeLonge/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://twitter.com/juniordelonge/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://instagram.com/juniordelonge/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://br.linkedin.com/in/juniordelonge/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; /dev @juniordelonge - 2024</p>
+            </div>
+        </footer>
+        <script>
+            const body = document.body;
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            const myTopnav = document.getElementById("myTopnav");
+    
+            const isDarkMode = localStorage.getItem("darkMode") === "enabled";
+    
+            if (isDarkMode) {
+                enableDarkMode();
+            } else {
+                disableDarkMode();
+            }
+    
+            darkModeToggle.addEventListener("click", () => {
+                if (body.classList.contains("dark-mode")) {
+                    disableDarkMode();
+                } else {
+                    enableDarkMode();
+                }
+            });
+    
+            function enableDarkMode() {
+                body.classList.add("dark-mode");
+                myTopnav.classList.add("dark-mode");
+                localStorage.setItem("darkMode", "enabled");
+                darkModeToggle.innerHTML = '<i class="fa-solid fa-bolt"></i>';
+            }
+    
+            function disableDarkMode() {
+                body.classList.remove("dark-mode");
+                myTopnav.classList.remove("dark-mode");
+                localStorage.setItem("darkMode", "disabled");
+                darkModeToggle.innerHTML = '<i class="fa-solid fa-bolt"></i>';
+            }
+        </script>
+    </body>
+    </html>    
